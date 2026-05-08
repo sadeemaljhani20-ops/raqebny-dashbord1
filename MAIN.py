@@ -5,6 +5,13 @@ import joblib
 import numpy as np
 
 app = FastAPI()
+from fastapi.responses import FileResponse
+
+@app.get("/")
+
+def home():
+
+    return FileResponse("dashboard.html")
 
 
 app.add_middleware(
