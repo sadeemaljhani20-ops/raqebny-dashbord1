@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">AI.PREDICT</div>
+            <ul>
+                <li class="active"><i class="fas fa-th-large"></i> Dashboard</li>
+                <li><i class="fas fa-users"></i> Team</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <h1>System Overview</h1>
+                <div class="user-info">Model: XGBoost v1.0</div>
+            </header>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Model Accuracy</h3>
+                    <p class="value">98.5%</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Points</h3>
+                    <p class="value">1,240</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Inference Time</h3>
+                    <p class="value">0.02s</p>
+                </div>
+            </div>
+            <div class="card">
+                    <i class="fas fa-server" style="color: #a371f7;"></i>
+                    <h3>Active Devices</h3>
+                    <p class="value" id="deviceCount">15</p>
+                </div>
+            </div>
+            <div class="prediction-area">
+                <div class="chart-box">
+                    <h3>Prediction History</h3>
+                    <canvas id="predictionChart"></canvas>
+                </div>
+                <div class="action-box">
+                    <h3>Run AI Analysis</h3>
+                    <div id="statusIndicator" class="indicator">--</div>
+                    <div id="alertMessage" class="alert-box">System Ready</div>
+                    <button id="runBtn" onclick="runInference()">START SCAN</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+</body>
+</html>
