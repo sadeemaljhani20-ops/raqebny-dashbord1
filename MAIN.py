@@ -5,6 +5,10 @@ import joblib
 import numpy as np
 
 app = FastAPI()
+
+from fastapi.staticfiles import StaticFiles
+
+app.mount("/static", StaticFiles(directory="."), name="static")
 from fastapi.responses import FileResponse
 
 @app.get("/")
