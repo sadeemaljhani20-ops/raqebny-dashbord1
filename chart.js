@@ -40,7 +40,7 @@ async function runInference() {
         for (let i = 1; i <= deviceCount; i++) {
             const randomTemp = (Math.random() * (80 - 20) + 20).toFixed(1);
             
-            const response = await fetch('http://127.0.0.1:8000/predict', {
+            const response = await fetch('/predict', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
